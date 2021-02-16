@@ -1,0 +1,303 @@
+
+html{
+    scroll-behavior: smooth;
+ }
+
+header{
+    .content-sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: $total;
+        visibility: hidden;
+        background-color: #141414;
+        z-index: 50;
+        .sticky{
+            &_row{
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 0;
+            }
+        }
+    }
+    [data-sticky="on"],[data-sticky="off"] {
+        padding-top: 15px;
+        @include animation(sticky .3s forwards);
+       
+        .col-2{
+            padding-left: rem(20px);
+            img{
+               width: 150%;
+            }
+        }
+        .col-7{
+            .dragon_development-navbar{
+                @include mq-md{
+                    display: none;
+                }
+                li{
+                    a{
+                        font-size: rem(7.5px);
+                    }
+                }
+            }
+        }
+    }
+    [data-sticky="off"]{
+        @include animation(sticky-reverse .5s  forwards !important);
+    }
+    
+    .dragon{
+        &_collum:last-child{
+            margin-left: $me;
+            margin-right: 1%;
+        }
+        &_development{
+            padding-top: 1.8%;
+            padding-right: 0.8%;
+            &-logo{
+                cursor: pointer;
+                @include transform(translateY(-5px));
+                img{
+                    position: absolute;
+                    width: $total;
+                    @include mq-x{
+                        width: 80%;
+                    }
+                    @include mq-ls{
+                        width: 200%;
+                    }
+                    @include mq-sm{
+                        @include transform(translateY(10px));
+                    }
+                    &:nth-of-type(1){
+                        @include animation(imgOne 3s infinite alternate);
+                    }
+                    &:nth-of-type(2){
+                        @include animation(imgTwo 3s infinite alternate);
+                    }
+                    &:nth-of-type(3){
+                        @include animation(imgThree 3s infinite alternate);
+                    }
+                }
+                
+            }
+            &-navbar{
+                display: flex;
+                list-style: none;
+                padding-left: 0;
+                @include transform(translatey(-2px));
+                margin-left: auto;
+                @include mq-md{
+                    display: none;
+                }
+                li{
+                    position: relative;
+                    margin: rem(5.6px);
+                    a{
+                        color: $secondColor !important;
+                        font-family: 'Marcellus';
+                        font-size: rem(6.65px);
+                        padding: rem(2px);
+                        cursor: pointer;
+                    }
+                   
+                    &.active{
+                        span{
+                            opacity: 1;
+                        }
+                    }
+                    
+                }
+                
+            }
+            nav{
+                display: flex;
+                .button-toggle{
+                    height: 60%;
+                    cursor: pointer;
+                    margin-top: 11px;
+                    margin-left: 10px;
+                    @include mq-md{
+                        margin-left: auto;
+                        padding-bottom: 10px;
+                    }
+                    [data-toggle]{
+                        display: block;
+                        height: 1.88px;
+                        width: 15px;
+                        background-color: aliceblue;
+                        opacity: 1 ;
+                        margin: 3px;
+                        @include mq-md{
+                            height: 4px;
+                            width: 30px;
+                            margin: 7px;
+                        }
+                    }
+                }
+            }
+            &-sidebar{
+                position: fixed;
+                right: -25%;
+                top: 0;
+                background: url(../../../assets/src/img/sidearea-background.jpg);
+                width: $total;
+                height: 100vh;
+                z-index: 50;
+                @include mq-md{
+                    right: -45%;
+                }
+                @include mq-sm{
+                    right: -100%;
+                }
+                .dragon_development-logo{
+                
+                    img{
+                        @include mq-sm{
+                            width: $total;
+                        }
+                    }
+                }
+                .icon-close{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    @include transform(translate(20px, -70%));
+                    background: url(../../../assets/src/img/close.png) no-repeat center center;
+                    background-size: 12px;
+                    width: 50px;
+                    height: 50px;
+                    display: block;
+                    cursor: pointer;
+                    @include mq-sm{
+                        background-size: 15px;
+                        @include transform(translate(20px, -50%));
+                        margin-bottom: 1rem;
+                    }
+                    
+                }
+                &-search{
+                    input{
+                        &:nth-of-type(1){
+                            width: $total;
+                            background: transparent;
+                            color: #fff !important;
+                            outline-style: none;
+                            border: none;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.541);
+                        }
+                        
+                       
+                    }
+                    ::-webkit-input-placeholder {color: $secondColor;}
+                    :-moz-placeholder { /* Firefox 18- */color: $secondColor;}
+                    ::-moz-placeholder {  /* Firefox 19+ */color: $secondColor;}
+                    :-ms-input-placeholder {color: $secondColor;}
+                    &-btn{
+                        position: absolute;
+                        background-color: transparent;
+                        cursor: pointer;
+                        border: 0;
+                        outline: 0;
+                        @include transform(translateX(-20px) rotateY(-180deg));
+                        font-size: 0px;
+                        background: url(../../../assets/src/img/lupa.png) no-repeat center center;
+                        background-size: 15px;
+                        width: 20px;
+                        height: 20px;
+    
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                &-tags{
+                    @include mq-md{
+                        display: none;
+                    }
+                    a{
+                        color: $secondColor;
+                        line-height: 2.5;
+                        font-weight: 500;
+                        text-decoration: none;
+                        border: 1px solid $secondColor;
+                        border-radius: 5px;
+                        padding: rem(3px);
+                        white-space: nowrap;
+
+                        &:hover{
+                            color: #101010;
+                            font-weight: 600;
+                            background-color: $secondColor;
+                        }
+                    }
+                }
+                nav{
+                    display: block;
+                }
+                &-navbar{
+                    color: $secondColor;
+                    list-style: none;
+                    text-align: center;
+                    cursor: pointer;
+                    @include mq-lg{
+                        display: none;
+                    }
+                    @include mq-md{
+                        padding-left: 0;
+                    }
+                    @include mq-sm{
+                        padding-left: 0;
+                    }
+                    li{
+                        padding: rem(1px);
+                        border: 1px solid $secondColor;
+                        margin: rem(6px);
+                        &:hover{
+                            color: #101010;
+                            background-color: $secondColor;
+                        }
+                    }
+                }
+            }
+            &-edge{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #000000;
+                width: $total;
+                height: 100vh;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 50;
+                @include mq-sm{
+                    display: none;
+                }
+               
+            }
+        }
+    }
+}
+
+.btnScroll{
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    background: url(../../../assets/src/img/sidearea-background.jpg);
+    padding: rem(5px);
+    &_ToTop{
+        display: block;
+        background: url(../../../assets/src/img/arrow_white.png) no-repeat center center;
+        background-size: 25px;
+        width: 40px;
+        height: 40px;
+        @include transition(transform .5s);
+
+    }
+    &:hover{
+        .btnScroll_ToTop{
+            @include transform(translateY(-5px));
+        }   
+    }
+}

@@ -1,0 +1,42 @@
+/*  
+    COMPONENTS
+*/
+
+@import './components/measures.scss';
+
+
+/* 
+    SETTINGS
+*/
+
+@import './settings/colors.scss';
+
+@import './settings/font.scss';
+
+@import './tools/mixis.scss';
+
+
+
+
+/* 
+    LIBRARYS 
+*/
+
+@import './librarys/bootstrap/bootstrap.scss';
+
+
+
+/* 
+    LAYOUTS 
+*/
+
+@import './layouts/_layout.scss';
+
+
+
+/* 
+    ANIMATIONS 
+*/
+@import './animations/default.scss';
+
+@import './animations/animations.scss';

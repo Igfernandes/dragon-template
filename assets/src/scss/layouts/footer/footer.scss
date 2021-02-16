@@ -1,0 +1,129 @@
+aside{
+    .dragon{
+        background: #101010 !important;
+        &_development{
+            &-about{
+                &-logo{
+                    cursor: pointer;
+                    height: 80px;
+                    img{
+                        position: absolute;
+                        width: 80%;
+                        &:nth-of-type(1){
+                            @include animation(imgOne 3s infinite alternate);
+                        }
+                        &:nth-of-type(2){
+                            @include animation(imgTwo 3s infinite alternate);
+                        }
+                        &:nth-of-type(3){
+                            @include animation(imgThree 3s infinite alternate);
+                        }
+                    }
+                    
+                }
+                &-text{
+                    font-family: $font-Open;
+                    color: $thirdColor;
+                }
+                &-search{
+                    position: relative;
+                    input{
+                        &:nth-of-type(1){
+                            width: $total;
+                            background: transparent;
+                            color: #fff !important;
+                            outline-style: none;
+                            border: none;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.719);
+                        }
+                        
+                        
+                       
+                    }
+                    ::-webkit-input-placeholder {color: $secondColor;}
+                    :-moz-placeholder { /* Firefox 18- */color: $secondColor;}
+                    ::-moz-placeholder {  /* Firefox 19+ */color: $secondColor;}
+                    :-ms-input-placeholder {color: $secondColor;}
+                    &-btn{
+                        position: absolute;
+                        background-color: transparent;
+                        cursor: pointer;
+                        border: 0;
+                        outline: 0;
+                        @include transform(translateX(-20px) rotateY(-180deg));
+                        font-size: 0px;
+                        background: url(../../../assets/src/img/lupa.png) no-repeat center center;
+                        background-size: 15px;
+                        @include W-h(20px);
+
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+            &-news{
+                color: $secondColor;
+                &-title{
+                    h4{
+                        font-size: clamp(.4rem, 1.2rem, 3vw);
+                    }
+                }
+                .box-new{
+                    display: inline;
+                    margin: 0 auto;
+                }
+                &-box{
+                    display: flex;
+                    .thumbnail{
+                        width: 30%;
+                        margin-bottom: 7%;
+                        img{
+                            width: 80%;
+                        }
+                    }
+                    .news_info{
+                        &-date{
+                            @include transform(translateY(-5px));
+                            span{
+                                font-family: $font-Open;
+                                font-size: rem(6.5px);
+                                font-weight: 200;
+                            }
+                        }
+                    }
+                }
+            }
+            &-midias{
+                display: flex;
+                img{
+                    width: 60%;
+                    @include transform(translateY(50%));
+                }
+            }
+            &-newslleter{
+                &-title{
+                    color: $secondColor;
+                }
+            }
+        }
+    }
+}
+footer{
+    .dragon{
+        background: #272727 !important;
+        &_development{
+            &-footer{
+                &-info{
+                    p{
+                        color: $secondColor;
+                        font-family: $font-Open;
+                    }
+                }
+                ul{
+                    display: flex;
+                }
+            }
+        }
+    }
+}

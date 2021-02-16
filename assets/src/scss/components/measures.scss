@@ -1,0 +1,29 @@
+/* 
+    MARGIN 
+*/
+
+$me: auto;
+
+$ms: auto;
+
+
+/* 
+    SIZES
+*/
+
+$total: 100%;
+
+
+
+
+
+
+/*
+    FONT
+*/
+
+@function rem($x){
+    @return $x * 2;
+};
+
+
