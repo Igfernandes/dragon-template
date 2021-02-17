@@ -7517,7 +7517,7 @@ header .dragon_development {
       header .dragon_development-navbar li a {
         color: #f1f1f1 !important;
         font-family: 'Marcellus';
-        font-size: 13.3px;
+        font-size: 15px;
         padding: 4px;
         cursor: pointer; }
       header .dragon_development-navbar li.active span {
@@ -8127,13 +8127,108 @@ footer .dragon {
   background-size: cover;
   background-attachment: fixed; }
 
-.dragon_wallpaper-contact {
-  position: absolute;
-  width: 100%;
-  height: 120vh;
-  background: url(../../../assets/src/img/contact-us-background-image.jpg) no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed; }
+.dragon {
+  position: relative; }
+  .dragon_wallpaper-contact {
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    background: url(../../../assets/src/img/contact-us-background-image.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; }
+  .dragon_development-contact .contact-watermark {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/src/img/contact-us-image-1.jpg) no-repeat top left;
+    background-size: 180%; }
+  .dragon_development-contact-form .dragon_form-group {
+    display: flex; }
+  .dragon_development-contact-form .dragon_form-name, .dragon_development-contact-form .dragon_form-email {
+    width: 100%; }
+    .dragon_development-contact-form .dragon_form-name input, .dragon_development-contact-form .dragon_form-email input {
+      font-family: "Open Sans", sans-serif;
+      width: 100%;
+      color: #f1f1f1;
+      background-color: transparent;
+      padding: 3.3vh 2vw;
+      border: 1px solid #8a8a8a;
+      -webkit-transition: border-color 1s ease-out;
+      -moz-transition: border-color 1s ease-out;
+      -ms-transition: border-color 1s ease-out;
+      -o-transition: border-color 1s ease-out;
+      transition: border-color 1s ease-in-out; }
+    .dragon_development-contact-form .dragon_form-name ::-webkit-input-placeholder, .dragon_development-contact-form .dragon_form-email ::-webkit-input-placeholder {
+      color: #f1f1f1;
+      font-weight: 500; }
+    .dragon_development-contact-form .dragon_form-name :-moz-placeholder, .dragon_development-contact-form .dragon_form-email :-moz-placeholder {
+      /* Firefox 18- */
+      color: #f1f1f1;
+      font-weight: 500; }
+    .dragon_development-contact-form .dragon_form-name ::-moz-placeholder, .dragon_development-contact-form .dragon_form-email ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #f1f1f1;
+      font-weight: 500; }
+    .dragon_development-contact-form .dragon_form-name :-ms-input-placeholder, .dragon_development-contact-form .dragon_form-email :-ms-input-placeholder {
+      color: #f1f1f1;
+      font-weight: 500; }
+    .dragon_development-contact-form .dragon_form-name:focus, .dragon_development-contact-form .dragon_form-email:focus {
+      border: 1px solid white;
+      outline: 0; }
+  .dragon_development-contact-form .dragon_form-message textarea {
+    font-family: "Open Sans", sans-serif;
+    color: #f1f1f1;
+    width: 100%;
+    background-color: transparent;
+    padding: 5% 8%;
+    border: 1px solid #8a8a8a;
+    -webkit-transition: outline .5s ease-in;
+    -moz-transition: outline .5s ease-in;
+    transition: border-color 0.2s; }
+  .dragon_development-contact-form .dragon_form-message ::-webkit-input-placeholder {
+    color: #f1f1f1;
+    font-weight: 500; }
+  .dragon_development-contact-form .dragon_form-message :-moz-placeholder {
+    /* Firefox 18- */
+    color: #f1f1f1;
+    font-weight: 500; }
+  .dragon_development-contact-form .dragon_form-message ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #f1f1f1;
+    font-weight: 500; }
+  .dragon_development-contact-form .dragon_form-message :-ms-input-placeholder {
+    color: #f1f1f1;
+    font-weight: 500; }
+  .dragon_development-contact-form .dragon_form-message:focus {
+    border: 1px solid white; }
+  .dragon_development-contact-form .dragon_form-btn {
+    width: 100%; }
+    .dragon_development-contact-form .dragon_form-btn button {
+      font-family: "Open Sans", sans-serif;
+      color: #f1f1f1;
+      font-weight: 600;
+      width: 100%;
+      background-color: transparent;
+      padding: 4.7%;
+      border: 1px solid #8a8a8a;
+      -webkit-transition: 0.5s ease-in;
+      -moz-transition: 0.5s ease-in;
+      -o-transition: 0.5s ease-in;
+      transition: 0.5s ease-in; }
+      .dragon_development-contact-form .dragon_form-btn button:focus {
+        border: 1px solid white;
+        outline: 0; }
+  .dragon_development-contact-form-title {
+    text-align: center; }
+    .dragon_development-contact-form-title h2 {
+      color: #f1f1f1;
+      font-size: 50px; }
+  .dragon_development-contact-form-separador {
+    text-align: center; }
+  .dragon_development-contact-map {
+    width: 100%;
+    height: 90vh; }
 
 /* 
     ANIMATIONS 

@@ -13,6 +13,11 @@
     <!-- NORMALIZE -->
     <link rel="stylesheet" href="./includes/normalize/normalize.css">
 
+    <!-- MAPBOX -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+
+
 </head>
 <body>
     <div class="dragon">
@@ -140,9 +145,9 @@
            
            
             <main class="dragon_development">
-                <div class="container-fluid dragon_development-about">
+                <div class="container-fluid dragon_development-about py-2">
                     <div class="row pb-5 justify-content-center  dragon_development-about-main">
-                        <div class="col-6 px-0 text-center dragon_development-about-main-collum">
+                        <div class="col-6 px-0 pb-5 text-center dragon_development-about-main-collum">
                             <div class="dragon_development-about-main">
                                 <div class="dragon_development-main-title">
                                     <h1>CONTACT US</h1>
@@ -155,9 +160,55 @@
         </div>
     </div>
 
-   
+    <section class="dragon">
+        <div class="content dragon_development">
+            <div class="container dragon_development-contact">
+                <div class="row justify-content-center">
+                    <div class="contact-watermark"></div>
+                    <div class="col-6 dragon_development-contact-collum px-4  py-5">
+                        <div class="dragon_development-contact-form py-5">
+                            <div class="dragon_development-contact-form-title pb-2">
+                                <h2>Drop A Line, Say Hi</h2>
+                            </div>
+                            <div class="dragon_development-contact-form-separador pt-2 pb-5">
+                                <img src="./assets/src/img/inner-img-1.png" alt="Separador">
+                            </div>
+                            <form action="#" method="post" class="pt-4 pb-5">
+                                <div class="dragon_form-group">
+                                    <div class="dragon_form-name mr-1">
+                                        <input type="text" name="name" id="formName" placeholder="YOUR NAME">
+                                    </div>
+                                    <div class="dragon_form-email ml-1 mb-1">
+                                        <input type="email" name="email" id="formEmail" placeholder="YOUR MAIL">
+                                    </div>
+                                </div>
+                                <div class="drago_form-group mt-1 mb-2">
+                                    <div class="dragon_form-message">
+                                        <textarea name="" id="" rows="10" placeholder="MESSAGE"></textarea>
+                                    </div>
+                                </div>
+                                <div class="dragon_form-group my-3">
+                                    <div class="dragon_form-btn">
+                                        <button type="submit">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
+    <section class="dragon">
+        <div class="container-fluid dragon_development">
+            <div class="row dragon_development-contact">
+                <div class="col-12 dragon_development-contact-collum px-0">
+                    <div id='map' class="dragon_development-contact-map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <aside>
         <div class="dragon">

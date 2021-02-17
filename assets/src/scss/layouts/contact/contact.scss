@@ -1,4 +1,5 @@
 .dragon{
+    position: relative;
     &_wallpaper{
         &-contact{
             position: absolute;
@@ -10,7 +11,110 @@
         }
     }
     &_development{
+        &-contact{
+            .contact{
+                &-watermark{
+                    position: absolute;
+                    display: block;
+                    @include w-h(100%);
+                    background: url(../../../assets/src/img/contact-us-image-1.jpg) no-repeat top left;
+                    background-size: 180%;
+                }
+            }
+            &-form{
+                .dragon{
+                    &_form{
+                        &-group{
+                            display: flex;
+                        }
+                        &-name, &-email{
+                            width: $total;
+                            
+                            input{
+                                font-family: $font-Open;
+                                width: $total;
+                                color: $secondColor;
+                                background-color: transparent;
+                                padding: 3.3vh 2vw;
+                                border:1px solid rgb(138, 138, 138);
+                                -webkit-transition: border-color 1s ease-out;
+                                -moz-transition: border-color 1s ease-out;
+                                -ms-transition: border-color 1s ease-out;
+                                -o-transition: border-color 1s ease-out;
+                                transition: border-color 1s ease-in-out;
+                                
+                            }
+                            ::-webkit-input-placeholder {color: $secondColor;font-weight: 500;}
+                            :-moz-placeholder { /* Firefox 18- */color: $secondColor;font-weight: 500;}
+                            ::-moz-placeholder {  /* Firefox 19+ */color: $secondColor;font-weight: 500;}
+                            :-ms-input-placeholder {color: $secondColor;font-weight: 500;}
 
+                            &:focus{
+                                border:1px solid rgb(255, 255, 255);
+                                outline: 0;
+                            }
+                        }
+                        &-message{
+                            textarea{
+                                font-family: $font-Open;
+                                color: $secondColor;
+                                width:  $total;
+                                background-color: transparent;
+                                padding: 5% 8%;
+                                border:1px solid rgb(138, 138, 138);
+                                -webkit-transition: outline .5s ease-in;
+                                -moz-transition: outline .5s ease-in;
+                                transition: border-color .2s ;
+                            }
+                            ::-webkit-input-placeholder {color: $secondColor; font-weight: 500;}
+                            :-moz-placeholder { /* Firefox 18- */color: $secondColor;font-weight: 500;}
+                            ::-moz-placeholder {  /* Firefox 19+ */color: $secondColor;font-weight: 500;}
+                            :-ms-input-placeholder {color: $secondColor;font-weight: 500;}
+
+                            &:focus{
+                                border:1px solid rgb(255, 255, 255);
+                                
+                            }
+                        }
+                        &-btn{
+                            width: $total;
+                            button{
+                                font-family: $font-Open;
+                                color: $secondColor;
+                                font-weight: 600;
+                                width: $total;
+                                background-color: transparent;
+                                padding: 4.7%;
+                                border:1px solid rgb(138, 138, 138);
+                                -webkit-transition: 0.5s ease-in;
+                                    -moz-transition: 0.5s ease-in;
+                                    -o-transition: 0.5s ease-in;
+                                    transition: 0.5s ease-in;
+
+                                &:focus{
+                                    border:1px solid rgb(255, 255, 255);
+                                    outline: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-title{
+                    text-align: center;
+                    h2{
+                        color: $secondColor;
+                        font-size: rem(25px);
+                    }
+                }
+                &-separador{
+                    text-align: center;
+                }
+            }
+            &-map{
+                width: $total;
+                height: 90vh;
+            }
+        }
         
     }
 }
