@@ -1,0 +1,16 @@
+.dragon{
+    &_wallpaper{
+        &-contact{
+            position: absolute;
+            width: $total;
+            height: 120vh;
+            background: url(../../../assets/src/img/contact-us-background-image.jpg) no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    }
+    &_development{
+
+        
+    }
+}

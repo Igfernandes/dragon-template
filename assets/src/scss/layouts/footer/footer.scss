@@ -54,7 +54,7 @@ aside{
                         font-size: 0px;
                         background: url(../../../assets/src/img/lupa.png) no-repeat center center;
                         background-size: 15px;
-                        @include W-h(20px);
+                        @include w-h(20px);
 
                         &:hover{
                             opacity: 0.5;

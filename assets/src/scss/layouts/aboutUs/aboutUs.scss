@@ -1,0 +1,16 @@
+.dragon{
+    &_wallpaper{
+        &-about{
+            position: absolute;
+            width: $total;
+            height: 120vh;
+            background: url(../../../assets/src/img/about-us-title-image-1.jpg) no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    }
+    &_development{
+
+       
+    }
+}

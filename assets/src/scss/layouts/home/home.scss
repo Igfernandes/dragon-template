@@ -29,7 +29,11 @@
     }
     &_development{
         opacity: 1 !important;
-        &-main{
+        &-main{ 
+            &-title{
+                color: $secondColor;
+                font-size: 3.1rem;
+            }
             &-collum{
                 margin-top: 7%;
                 margin-bottom: 11%;
@@ -53,7 +57,7 @@
             &-left{
                 text-align: right;
                 @include transform(translateX(-30vw));
-                @include animation( rotate 1s 0 2s forwards);
+                @include animation( rotate 1s 2s forwards);
                 img{
                     width: $total;
                 }
@@ -88,7 +92,7 @@
                     opacity: 0;
                     padding-left: 1%;
                     margin-bottom: 20%;
-                    @include animation( show .8s 0 2.2s forwards);
+                    @include animation( show .8s 2.2s forwards);
                     h1{
                         font-size: clamp(4rem, 6rem, 7vw);
                         @include mq-sm{
@@ -100,7 +104,7 @@
                     display: inline;
                     color: $secondColor;
                     opacity: 0;
-                    @include animation( show .8s 0 2.4s forwards);
+                    @include animation( show .8s 2.4s forwards);
                     a{
                         color: $secondColor;
                         text-decoration: none;
