@@ -48,9 +48,6 @@ Temporary Items
 *.sublime-*
 
 
-#dist
-assets/dist/*
-
 #SCSS cahce
 assets/.sass-cache/
 
