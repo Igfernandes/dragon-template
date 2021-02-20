@@ -1,0 +1,67 @@
+.dragon{
+    &_wallpaper{
+        &-404{
+            position: absolute;
+            @include w-h($total);
+            background: url(../../../assets/src/img/404.jpg) no-repeat center center;
+            background-size: cover;
+        }
+    }
+    .content{
+        .btn{
+            opacity: 1;
+            animation: none !important;
+        }
+    }
+    &_development{
+        &-404{
+            &-title{
+                text-align: center;
+                h1{
+                    color: $secondColor;
+                    font-size: clamp(10rem, 14.5rem, 16vw);
+                    line-height: .9;
+                    margin: 0;
+                    span{
+                        display: inline-block;
+                        transform: rotateY(180deg);
+                    }
+                }
+            }
+            &-subtitle{
+                text-align: center;
+                h2{
+                    color: $secondColor;
+                    font-size: clamp(5rem, 6.5rem, 8vw);
+                    margin: 0;
+                }
+            }
+            &-separador{
+                text-align: center;
+                img{
+                    width: 50%;
+                }
+            }
+            &-box{
+                &-info{
+                    &-text{
+                        text-align: center;
+                        p{
+                            color: $secondColor;
+                            font-size: clamp(1rem, 1.2rem, 2vw);
+                        }
+                    }
+                }
+                &-btn{
+                    text-align: center;
+                    .btn{
+                        a{
+                            font-size: clamp(1rem, 1.2rem, 2vw);
+                            padding: 3vh 4vw !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

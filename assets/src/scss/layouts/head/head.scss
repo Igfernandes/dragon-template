@@ -1,7 +1,10 @@
 
 html{
     scroll-behavior: smooth;
- }
+    body{
+        overflow-x: hidden;
+    }
+}
 
 header{
     .content-sticky{
@@ -258,6 +261,9 @@ header{
                         &:hover{
                             color: #101010;
                             background-color: $secondColor;
+                        }
+                        a{
+                            color: $secondColor;
                         }
                     }
                 }

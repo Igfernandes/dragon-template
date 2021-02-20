@@ -7413,6 +7413,24 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+/**
+* ANIMATION
+**/
+@keyframes exit {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.carousel_active {
+  animation: exit .2s;
+  animation-fill-mode: forwards; }
+
+[data-index="-1"] {
+  opacity: 0; }
+
+[data-index="0"] {
+  opacity: 1; }
+
 /* 
     LAYOUTS 
 */
@@ -7421,6 +7439,8 @@ a.text-dark:hover, a.text-dark:focus {
 */
 html {
   scroll-behavior: smooth; }
+  html body {
+    overflow-x: hidden; }
 
 header .content-sticky {
   position: fixed;
@@ -7661,6 +7681,8 @@ header .dragon_development {
         header .dragon_development-sidebar-navbar li:hover {
           color: #101010;
           background-color: #f1f1f1; }
+        header .dragon_development-sidebar-navbar li a {
+          color: #f1f1f1; }
   header .dragon_development-edge {
     position: fixed;
     top: 0;
@@ -7818,7 +7840,7 @@ footer .dragon {
   .dragon .wallpaper {
     position: absolute;
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     opacity: 0;
     background: url(../../../assets/src/img/matches-slider-image-1.jpg) no-repeat center center;
     background-size: cover;
@@ -7829,10 +7851,36 @@ footer .dragon {
     animation: opacity 0.5s 1.5s forwards; }
     @media (max-width: 576px) {
       .dragon .wallpaper {
-        height: 100%; } }
+        height: 100%;
+        background-size: 389%;
+        background-position-x: 65%; } }
   .dragon .content {
     max-width: 1250px;
     margin: 0 auto; }
+    .dragon .content .btn {
+      display: inline;
+      color: #f1f1f1;
+      opacity: 0;
+      -webkit-animation: show 0.8s 2.4s forwards;
+      -moz-animation: show 0.8s 2.4s forwards;
+      -o-animation: show 0.8s 2.4s forwards;
+      animation: show 0.8s 2.4s forwards; }
+      .dragon .content .btn a {
+        color: #f1f1f1;
+        text-decoration: none;
+        padding: 22px 32px;
+        border: 1px solid #f1f1f1;
+        transition: box-shadow 0.3s; }
+        @media screen and (prefers-reduced-motion: reduce) {
+          .dragon .content .btn a {
+            transition: none; } }
+        @media (max-width: 576px) {
+          .dragon .content .btn a {
+            font-size: .9rem;
+            padding: 12px 17px; } }
+        .dragon .content .btn a:hover {
+          box-shadow: 0px 0px 20px #f1f1f1;
+          border-color: rgba(255, 255, 255, 0.7); }
   .dragon_development {
     opacity: 1 !important; }
     .dragon_development-main-title {
@@ -7840,7 +7888,7 @@ footer .dragon {
       font-size: 3.1rem; }
     .dragon_development-main-collum {
       margin-top: 7%;
-      margin-bottom: 11%; }
+      margin-bottom: 6.9%; }
       .dragon_development-main-collum:nth-of-type(1) {
         -webkit-transform: translateY(2.5vh);
         -moz-transform: translateY(2.5vh);
@@ -7865,6 +7913,10 @@ footer .dragon {
       -moz-animation: show 0.8s 2.6s forwards;
       -o-animation: show 0.8s 2.6s forwards;
       animation: show 0.8s 2.6s forwards; }
+      @media (max-width: 576px) {
+        .dragon_development-main .water-mark {
+          background-size: 160%;
+          background-position-y: -19vh; } }
     .dragon_development-main-left {
       text-align: right;
       -webkit-transform: translateX(-30vw);
@@ -7922,30 +7974,6 @@ footer .dragon {
         @media (max-width: 576px) {
           .dragon_development-main-titles .title h1 {
             font-size: 1.7rem; } }
-    .dragon_development-main-titles .main-btn {
-      display: inline;
-      color: #f1f1f1;
-      opacity: 0;
-      -webkit-animation: show 0.8s 2.4s forwards;
-      -moz-animation: show 0.8s 2.4s forwards;
-      -o-animation: show 0.8s 2.4s forwards;
-      animation: show 0.8s 2.4s forwards; }
-      .dragon_development-main-titles .main-btn a {
-        color: #f1f1f1;
-        text-decoration: none;
-        padding: 22px 32px;
-        border: 1px solid #f1f1f1;
-        transition: box-shadow 0.3s; }
-        @media screen and (prefers-reduced-motion: reduce) {
-          .dragon_development-main-titles .main-btn a {
-            transition: none; } }
-        @media (max-width: 576px) {
-          .dragon_development-main-titles .main-btn a {
-            font-size: .9rem;
-            padding: 12px 17px; } }
-        .dragon_development-main-titles .main-btn a:hover {
-          box-shadow: 0px 0px 20px #f1f1f1;
-          border-color: rgba(255, 255, 255, 0.7); }
     .dragon_development-section-title {
       color: #f1f1f1;
       margin-bottom: 26px; }
@@ -8124,9 +8152,136 @@ footer .dragon {
   position: absolute;
   width: 100%;
   height: 120vh;
-  background: url(../../../assets/src/img/about-us-title-image-1.jpg) no-repeat center center;
+  background: url(../../../assets/src/img/about-us-title-image-1.jpg) no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  overflow: hidden;
+  filter: brightness(0.7);
+  background-position: 50% 0px; }
+  .dragon_wallpaper-about-second {
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    background: #121212;
+    background-size: cover;
+    overflow: hidden; }
+@media (max-width: 576px) {
+  .dragon_development-about-collum-content {
+    height: 100vh; } }
+.dragon_development-about-collum-content-wallpaper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff url(../../../assets/src/img/about-us-image-1.jpg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: 50% 0px;
+  z-index: 7; }
+.dragon_development-about-title {
+  color: #f1f1f1; }
+  .dragon_development-about-title h1 {
+    color: #f1f1f1;
+    font-size: clamp(2rem, 6.5rem, 8vw); }
+  .dragon_development-about-title h3 {
+    font-size: clamp(1.5rem, 2.2rem, 4vw); }
+    @media (max-width: 576px) {
+      .dragon_development-about-title h3 {
+        text-align: center; } }
+  @media (max-width: 576px) {
+    .dragon_development-about-title h4 {
+      font-size: 1.6rem;
+      text-align: center; } }
+.dragon_development-about-text {
+  font-family: "Open Sans", sans-serif;
+  color: #f1f1f1;
+  text-align: justify;
+  font-weight: 500; }
+  .dragon_development-about-text p {
+    font-size: clamp(0.9rem, 1rem, 1.2vw); }
+.dragon_development-about-box-img {
+  float: left; }
+  .dragon_development-about-box-img img {
+    width: 100%;
+    height: 100%; }
+.dragon_development-about-box-info-title {
+  color: #f1f1f1; }
+  .dragon_development-about-box-info-title h6 {
+    font-size: clamp(1.5rem, 2rem, 3vw); }
+.dragon_development-about-box-info-text {
+  color: #f1f1f1; }
+  .dragon_development-about-box-info-text p {
+    font-size: clamp(0.7rem, 0.8rem, 1.2vw);
+    line-height: 1.8; }
+    @media (max-width: 576px) {
+      .dragon_development-about-box-info-text p {
+        font-size: .9rem; } }
+.dragon_development-about-describe {
+  color: #f1f1f1; }
+.dragon_development-about .dragon_carousel {
+  overflow-x: hidden;
+  overflow-y: visible; }
+  .dragon_development-about .dragon_carousel-inner {
+    width: calc(100% * 3);
+    text-align: center;
+    display: flex;
+    transition: transform 800ms cubic-bezier(0.38, 0.76, 0, 0.87) 0s; }
+  .dragon_development-about .dragon_carousel-item-title {
+    text-align: center; }
+    .dragon_development-about .dragon_carousel-item-title h2 {
+      text-transform: uppercase;
+      font-size: clamp(2rem, 3rem, 3.5vw); }
+  .dragon_development-about .dragon_carousel-item-text {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center; }
+    .dragon_development-about .dragon_carousel-item-text p {
+      font-size: clamp(0.8rem, 1.1rem, 1.5vw); }
+  .dragon_development-about .dragon_carousel-item-author {
+    text-align: center;
+    color: #f1f1f1; }
+  .dragon_development-about .dragon_carousel-controls-next-icon, .dragon_development-about .dragon_carousel-controls-prev-icon {
+    position: absolute;
+    top: 50%;
+    background: url(../../../assets/src/img/arrow_white.png) no-repeat center center;
+    background-size: 2.2vw;
+    width: 3vw;
+    height: 3vw;
+    display: block;
+    cursor: pointer;
+    transition: all .3s ease-in-out; }
+    @media (max-width: 576px) {
+      .dragon_development-about .dragon_carousel-controls-next-icon, .dragon_development-about .dragon_carousel-controls-prev-icon {
+        background-size: 5vw;
+        width: 6vw;
+        height: 6vw; } }
+  .dragon_development-about .dragon_carousel-controls-next-icon {
+    right: 0;
+    transform: rotate(90deg); }
+    @media (max-width: 576px) {
+      .dragon_development-about .dragon_carousel-controls-next-icon {
+        transform: rotate(90deg) translateY(20px); } }
+    .dragon_development-about .dragon_carousel-controls-next-icon:hover {
+      transform: rotate(90deg) translateY(12px); }
+      @media (max-width: 576px) {
+        .dragon_development-about .dragon_carousel-controls-next-icon:hover {
+          transform: rotate(90deg) translateY(32px); } }
+  .dragon_development-about .dragon_carousel-controls-prev-icon {
+    left: 0;
+    transform: rotate(-90deg); }
+    .dragon_development-about .dragon_carousel-controls-prev-icon:hover {
+      transform: rotate(-90deg) translateY(12px); }
+
+.inner-wallpaper {
+  background: url(../../../assets/src/img/inner-background-img-3.jpg); }
+
+.mt-neg {
+  margin-top: -60px; }
+
+.content-2 {
+  max-width: 625px;
+  margin-right: auto; }
 
 .dragon {
   position: relative; }
@@ -8137,6 +8292,9 @@ footer .dragon {
     background: url(../../../assets/src/img/contact-us-background-image.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed; }
+  .dragon_development-contact-main-title h1 {
+    color: #f1f1f1;
+    font-size: clamp(2.5rem, 5rem, 8vw); }
   .dragon_development-contact .contact-watermark {
     position: absolute;
     display: block;
@@ -8144,6 +8302,13 @@ footer .dragon {
     height: 100%;
     background: url(../../../assets/src/img/contact-us-image-1.jpg) no-repeat top left;
     background-size: 180%; }
+    @media (max-width: 768px) {
+      .dragon_development-contact .contact-watermark {
+        background-size: 220%; } }
+    @media (max-width: 576px) {
+      .dragon_development-contact .contact-watermark {
+        background-size: 400%;
+        background-position-x: 20%; } }
   .dragon_development-contact-form .dragon_form-group {
     display: flex; }
   .dragon_development-contact-form .dragon_form-name, .dragon_development-contact-form .dragon_form-email {
@@ -8160,6 +8325,10 @@ footer .dragon {
       -ms-transition: border-color 1s ease-out;
       -o-transition: border-color 1s ease-out;
       transition: border-color 1s ease-in-out; }
+      @media (max-width: 576px) {
+        .dragon_development-contact-form .dragon_form-name input, .dragon_development-contact-form .dragon_form-email input {
+          font-size: clamp(0.8rem, 1.22rem, 2vw);
+          padding: 3.3vh 4vw; } }
     .dragon_development-contact-form .dragon_form-name ::-webkit-input-placeholder, .dragon_development-contact-form .dragon_form-email ::-webkit-input-placeholder {
       color: #f1f1f1;
       font-weight: 500; }
@@ -8187,6 +8356,9 @@ footer .dragon {
     -webkit-transition: outline .5s ease-in;
     -moz-transition: outline .5s ease-in;
     transition: border-color 0.2s; }
+    @media (max-width: 576px) {
+      .dragon_development-contact-form .dragon_form-message textarea {
+        font-size: clamp(0.8rem, 1.22rem, 2vw); } }
   .dragon_development-contact-form .dragon_form-message ::-webkit-input-placeholder {
     color: #f1f1f1;
     font-weight: 500; }
@@ -8224,12 +8396,54 @@ footer .dragon {
     text-align: center; }
     .dragon_development-contact-form-title h2 {
       color: #f1f1f1;
-      font-size: 50px; }
+      font-size: clamp(1.9rem, 4rem, 7vw); }
   .dragon_development-contact-form-separador {
     text-align: center; }
+    .dragon_development-contact-form-separador img {
+      width: 100%; }
   .dragon_development-contact-map {
     width: 100%;
     height: 90vh; }
+
+.dragon_wallpaper-404 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/src/img/404.jpg) no-repeat center center;
+  background-size: cover; }
+.dragon .content .btn {
+  opacity: 1;
+  animation: none !important; }
+.dragon_development-404-title {
+  text-align: center; }
+  .dragon_development-404-title h1 {
+    color: #f1f1f1;
+    font-size: clamp(10rem, 14.5rem, 16vw);
+    line-height: .9;
+    margin: 0; }
+    .dragon_development-404-title h1 span {
+      display: inline-block;
+      transform: rotateY(180deg); }
+.dragon_development-404-subtitle {
+  text-align: center; }
+  .dragon_development-404-subtitle h2 {
+    color: #f1f1f1;
+    font-size: clamp(5rem, 6.5rem, 8vw);
+    margin: 0; }
+.dragon_development-404-separador {
+  text-align: center; }
+  .dragon_development-404-separador img {
+    width: 50%; }
+.dragon_development-404-box-info-text {
+  text-align: center; }
+  .dragon_development-404-box-info-text p {
+    color: #f1f1f1;
+    font-size: clamp(1rem, 1.2rem, 2vw); }
+.dragon_development-404-box-btn {
+  text-align: center; }
+  .dragon_development-404-box-btn .btn a {
+    font-size: clamp(1rem, 1.2rem, 2vw);
+    padding: 3vh 4vw !important; }
 
 /* 
     ANIMATIONS 

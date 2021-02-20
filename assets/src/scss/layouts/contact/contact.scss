@@ -12,6 +12,14 @@
     }
     &_development{
         &-contact{
+            &-main{
+                &-title{
+                    h1{
+                        color: $secondColor;
+                        font-size: clamp(2.5rem, 5rem, 8vw);
+                    }
+                }
+            }
             .contact{
                 &-watermark{
                     position: absolute;
@@ -19,9 +27,17 @@
                     @include w-h(100%);
                     background: url(../../../assets/src/img/contact-us-image-1.jpg) no-repeat top left;
                     background-size: 180%;
+                    @include mq-md{
+                        background-size: 220%;
+                    }
+                    @include mq-sm{
+                        background-size: 400%;
+                        background-position-x: 20%;
+                    }
                 }
             }
             &-form{
+                
                 .dragon{
                     &_form{
                         &-group{
@@ -42,6 +58,10 @@
                                 -ms-transition: border-color 1s ease-out;
                                 -o-transition: border-color 1s ease-out;
                                 transition: border-color 1s ease-in-out;
+                                @include mq-sm{
+                                    font-size: clamp(.8rem,1.22rem, 2vw);
+                                    padding: 3.3vh 4vw;
+                                }
                                 
                             }
                             ::-webkit-input-placeholder {color: $secondColor;font-weight: 500;}
@@ -65,6 +85,9 @@
                                 -webkit-transition: outline .5s ease-in;
                                 -moz-transition: outline .5s ease-in;
                                 transition: border-color .2s ;
+                                @include mq-sm{
+                                    font-size: clamp(.8rem,1.22rem, 2vw);
+                                }
                             }
                             ::-webkit-input-placeholder {color: $secondColor; font-weight: 500;}
                             :-moz-placeholder { /* Firefox 18- */color: $secondColor;font-weight: 500;}
@@ -103,11 +126,14 @@
                     text-align: center;
                     h2{
                         color: $secondColor;
-                        font-size: rem(25px);
+                        font-size: clamp(1.9rem, 4rem, 7vw);
                     }
                 }
                 &-separador{
                     text-align: center;
+                    img{
+                        width: 100%;
+                    }
                 }
             }
             &-map{

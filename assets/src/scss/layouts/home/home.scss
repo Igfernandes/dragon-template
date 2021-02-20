@@ -13,7 +13,7 @@
     .wallpaper{
         position: absolute;
         width: $total;
-        height: 120vh;
+        height: 100vh;
         opacity: 0;
         background: url(../../../assets/src/img/matches-slider-image-1.jpg) no-repeat center center;
         background-size: cover;
@@ -21,11 +21,36 @@
         @include animation( opacity .5s  1.5s forwards);
         @include mq-sm{
             height: $total;
+            background-size: 389%;
+            background-position-x: 65%;
         }
     }    
     .content{
         max-width: 1250px;
         margin: 0 auto;
+        .btn{
+            display: inline;
+            color: $secondColor;
+            opacity: 0;
+            @include animation( show .8s 2.4s forwards);
+            a{
+                color: $secondColor;
+                text-decoration: none;
+                padding: rem(11px) rem(16px);
+                border: 1px solid $secondColor;
+                @include transition( box-shadow .3s);
+                @include mq-sm{
+                    font-size: .9rem;
+                    padding: 12px 17px;
+                }
+
+                &:hover{
+                    box-shadow: 0px 0px 20px $secondColor;
+                    border-color: rgba(255,255,255,0.7);
+                }
+            }
+            
+        }
     }
     &_development{
         opacity: 1 !important;
@@ -36,7 +61,7 @@
             }
             &-collum{
                 margin-top: 7%;
-                margin-bottom: 11%;
+                margin-bottom: 6.9%;
                 &:nth-of-type(1) {
                     @include transform(translateY(2.5vh));
                 }
@@ -53,6 +78,10 @@
                 background-position-y: -12vh;
                 opacity: 0;
                 @include animation( show .8s 2.6s forwards);
+                @include mq-sm{
+                    background-size: 160%;
+                    background-position-y: -19vh;
+                }
             }
             &-left{
                 text-align: right;
@@ -99,29 +128,6 @@
                             font-size: 1.7rem;
                         }
                     }
-                }
-                .main-btn{
-                    display: inline;
-                    color: $secondColor;
-                    opacity: 0;
-                    @include animation( show .8s 2.4s forwards);
-                    a{
-                        color: $secondColor;
-                        text-decoration: none;
-                        padding: rem(11px) rem(16px);
-                        border: 1px solid $secondColor;
-                        @include transition( box-shadow .3s);
-                        @include mq-sm{
-                            font-size: .9rem;
-                            padding: 12px 17px;
-                        }
-
-                        &:hover{
-                            box-shadow: 0px 0px 20px $secondColor;
-                            border-color: rgba(255,255,255,0.7);
-                        }
-                    }
-                    
                 }
             }
         }

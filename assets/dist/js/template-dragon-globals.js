@@ -4,14 +4,10 @@
 
 // LIBARYS
 
-import './assets/dist/js/libary/_bootstrap';
+import './libary/_bootstrap.js';
 
 
 //ACTIONS 
 
-import './assets/dist/js/libary/_actions.js';
+import './libary/_actions.js';
 
-
-//API's
-
-import './assets/dist/js/libary/mapbox/mapbox.js';

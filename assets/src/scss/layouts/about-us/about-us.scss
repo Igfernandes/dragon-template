@@ -1,16 +1,195 @@
+
+
 .dragon{
     &_wallpaper{
         &-about{
             position: absolute;
             width: $total;
             height: 120vh;
-            background: url(../../../assets/src/img/about-us-title-image-1.jpg) no-repeat center center;
+            background: url(../../../assets/src/img/about-us-title-image-1.jpg) no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            overflow: hidden;
+            filter: brightness(0.7);
+            background-position: 50% 0px;
+            &-second{
+                position: absolute;
+                width: $total;
+                height: 120vh;
+                background: #121212;
+                background-size: cover;
+                overflow: hidden;
+            }
         }
     }
     &_development{
+        &-about{
+            &-collum{
+                &-content{
+                    @include mq-sm{
+                        height: 100vh;
+                    }
+                    &-wallpaper{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff url(../../../assets/src/img/about-us-image-1.jpg) no-repeat;
+                    background-size: cover;
+                    overflow: hidden;
+                    background-position: 50% 0px;
+                    z-index: 7;
+                    }
+                }
+            }
+            &-title{
+                color: $secondColor;
+                h1{
+                    color: $secondColor;
+                    font-size: clamp(2rem, 6.5rem, 8vw);
+                }
+                h3{
+                    font-size: clamp(1.5rem, 2.2rem, 4vw);
+                    @include mq-sm{
+                        text-align: center;
+                    } 
+                }
+                h4{
+                    @include mq-sm{
+                        font-size: 1.6rem;
+                        text-align: center;
+                    }
+                }
+            }
+            &-text{
+                font-family: $font-Open;
+                color: $secondColor;
+                text-align: justify;
+                font-weight: 500;
+                p{
+                    font-size: clamp(0.9rem, 1rem, 1.2vw);                
+                }
+            }
+            &-box{
+                &-img{
+                    float: left;
+                    img{
+                        @include w-h(100%);
+                    }
+                }
+                &-info{
+                    &-title{
+                        color: $secondColor;
+                        h6{
+                            font-size: clamp(1.5rem, 2rem, 3vw);
+                        }
+                    }
+                    &-text{
+                        color: $secondColor;
+                        p{
+                            font-size: clamp(.7rem, .8rem, 1.2vw);
+                            line-height: 1.8;
+                            @include mq-sm{
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &-describe{
+                color: $secondColor;
+            }
+            .dragon_carousel{
+                overflow-x: hidden;
+                overflow-y: visible;
+                &-inner{
+                    width: calc(100% * 3);
+                    text-align: center;
+                    display: flex;
+                    transition: transform 800ms cubic-bezier(0.38, 0.76, 0, 0.87) 0s;
+                }
+                &-item{
+                    &-title{
+                        text-align: center;
+                        h2{
+                            text-transform: uppercase;
+                            font-size: clamp(2rem, 3rem, 3.5vw)
+                        }
+                    }
+                    &-text{
+                        width: 60%;
+                        margin: 0 auto;
+                        text-align: center;
+                        p{
+                            font-size: clamp(.8rem, 1.1rem, 1.5vw);
+                        }
+                    }
+                    &-author{
+                        text-align: center;
+                        color: $secondColor;
+                    }
+                }
+                &-controls{
+                    &-next, &-prev{
+                        &-icon{
+                            position: absolute;
+                            top: 50%;
+                            background: url(../../../assets/src/img/arrow_white.png) no-repeat center center;
+                            background-size: 2.2vw;
+                            @include w-h(3vw);
+                            display: block;
+                            cursor: pointer;
+                            transition: all .3s ease-in-out;
+                            @include mq-sm{
+                                background-size: 5vw;
+                                @include w-h(6vw);
+                            }
+                        }
+                    }
+                    &-next{
+                        &-icon{
+                            right: 0;
+                            transform: rotate(90deg) ;
+                            @include mq-sm{
+                                transform: rotate(90deg) translateY(20px);
+                            }
 
+                            &:hover{
+                                transform: rotate(90deg) translateY(12px);
+                                @include mq-sm{
+                                    transform: rotate(90deg) translateY(32px);
+                                }
+                            }
+                        }
+                    }
+                    &-prev{
+                        &-icon{
+                            left: 0;
+                            transform: rotate(-90deg);
+                            &:hover{
+                                transform: rotate(-90deg) translateY(12px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
        
     }
+}
+
+
+.inner-wallpaper{
+    background: url(../../../assets/src/img/inner-background-img-3.jpg);
+
+}
+
+.mt-neg{
+    margin-top: -60px;
+}
+
+.content-2{
+    max-width: 625px;
+    margin-right: auto;
 }
