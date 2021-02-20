@@ -3,7 +3,7 @@
 O template foi desenvolvido com o princípio de servir como tecnica de reforço para o apredendizado, além de servir como portfólio.
 
 ## SASS CONVERSOR
-- Utilize qualquer ferramenta para converter os arquivos
+- Utilize qualquer compilador de  SASS
 
 
 ## Recursos
