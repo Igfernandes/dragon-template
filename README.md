@@ -12,7 +12,7 @@ O template foi desenvolvido com o princípio de servir como tecnica de reforço 
 
 
 ### Scripts
-- 
+- cnd html5shiv
 
 ## Dependences
 - BootStrap: 5.0.0 
