@@ -60,9 +60,8 @@
             <td> assets </td>
             <td> dist  ~| src </td>
             <td> img ~ scss   ~|  css ~ js </td>
-            <td> ... ~|  libary ~ modules </td>
-            <td>  Dragon Icons ~  ...   ~| ..  ~ libary  </td>
-            <td>  ... </td>
+            <td> ... ~|  libary ~ modules  |  Dragon Icons ~  ...   ~| ..  ~ libary </td>
+            <td> ...  </td>
         </tr>
         <tr>
             <td> includes </td>
