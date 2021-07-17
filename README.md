@@ -2,7 +2,7 @@
 # Desenvolvedor: Igor Fernandes
 
 <pre>
-- O template foi desenvolvido com o princípio de servir como tecnica de reforço para o apredendizado, além<br> de servir como portfólio.
+- O template foi desenvolvido com o princípio de servir como tecnica de reforço para o apredendizado, além de servir<br> como portfólio.
 </pre>
 
 ## Apresentação:
